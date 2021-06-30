@@ -9,7 +9,7 @@ import java.util.concurrent.TimeUnit
 object ServiceBuilder {
 
     // the Base adresse
-    private const val BASE_URL = "http://"
+    private const val BASE_URL = "https://8d0944c8b36d.ngrok.io/v1"
 
     val interceptor = HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY)
 
