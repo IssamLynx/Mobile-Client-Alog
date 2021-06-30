@@ -3,11 +3,24 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/graph_navigation"
-    app:startDestination="@id/userFragment">
+    app:startDestination="@id/addContactFragment">
 
     <fragment
-        android:id="@+id/userFragment"
-        android:name="com.example.mobileclientalog.ui.fragment.UserFragment"
-        android:label="fragment_user"
-        tools:layout="@layout/fragment_user" />
+        android:id="@+id/addContactFragment"
+        android:name="com.example.mobileclientalog.ui.fragment.AddContactFragment"
+        android:label="fragment_add_contact"
+        tools:layout="@layout/fragment_add_contact" >
+        <action
+            android:id="@+id/action_addContactFragment_to_listeContacts"
+            app:destination="@id/listeContacts" />
+    </fragment>
+    <fragment
+        android:id="@+id/listeContacts"
+        android:name="com.example.mobileclientalog.ui.fragment.ListeContacts"
+        android:label="fragment_liste_contacts"
+        tools:layout="@layout/fragment_liste_contacts" >
+        <action
+            android:id="@+id/action_listeContacts_to_addContactFragment"
+            app:destination="@id/addContactFragment" />
+    </fragment>
 </navigation>
